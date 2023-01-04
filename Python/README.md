@@ -8,4 +8,6 @@
 * [시퀀스](%EC%8B%9C%ED%80%80%EC%8A%A4.md)
 * [리스트](%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
 * [조건문](%EC%A1%B0%EA%B1%B4%EB%AC%B8.md)
+
+* [함수](%ED%95%A8%EC%88%98.md)
 ***
