@@ -10,6 +10,7 @@
 ***
 ### 특강 or 프로젝트
 * [Friday](Friday)
+* [Project](Friday/Project/)
 ***
 ### 온라인 강의
 * [Online](Online)
