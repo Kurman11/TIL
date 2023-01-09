@@ -11,16 +11,31 @@ genres_list = json.load(genres_json)
 print(type(movie))
 print(type(genres_list))
 a =[]
-
+p =[]
+genre_ids = movie['genre_ids']
 for i in genres_list:
     c = {
         i['id'] : i['name']
     }
+    a.append(c)
 
     for key,value in c.items():
-        if key == 18 :
-            a.append(value)
-        elif key == 80 :
-            a.append(value)
+        for x in genre_ids:
+            if key == x:
+                p.append(value)
+print(p)
 
-print(a)
+    # for x in movie['genre_ids'][0]:
+    #     if x in i:
+        
+    # for x in a:
+    #     for t in genre_ids:
+    #         c.keys(t)
+
+#     for key,value in c.items():
+#         if key == 18 :
+#             a.append(value)
+#         elif key == 80 :
+#             a.append(value)
+
+# print(a)
