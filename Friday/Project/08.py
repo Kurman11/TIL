@@ -24,6 +24,7 @@ for i in genres_list:
         for x in genre_ids:
             if key == x:
                 p.append(value)
+                p.sort(reverse=True)
                 d ={
                 'id' : movie['id'],
                 'vote_average' : movie['vote_average'],

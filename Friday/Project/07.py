@@ -23,6 +23,7 @@ for i in genres_list:
         for x in genre_ids:
             if key == x:
                 p.append(value)
+                p.sort(reverse=True)
 print(p)
 
     # for x in movie['genre_ids'][0]:
