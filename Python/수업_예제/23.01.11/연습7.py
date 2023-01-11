@@ -1,0 +1,11 @@
+import sys
+sys.stdin = open('input(7).txt','r')
+
+T, num = map(int,input().split())
+
+for t in range(1,T+1):
+    for i in range(num):
+        numbers = int(input())
+        print(numbers)
+    
+    pass
