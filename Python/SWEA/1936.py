@@ -1,10 +1,14 @@
 
-
-
-scissors = '1'
-rock = '2'
-paper = '3'
+scissors = int(1)
+rock = int(2)
+paper = int(3)
 
 A , B= map(int,input().split())
 
-print(A,B)
+if rock > scissors:
+    print(A)
+elif scissors > paper:
+    print(A)
+elif paper > rock:
+    print(A)
+
