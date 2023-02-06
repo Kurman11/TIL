@@ -9,17 +9,21 @@ for t in range(1,T+1):
     num = [list(map(int,input().split())) for _ in range(N)]
     num1 = [[0 for _ in range(M)] for _ in  range(M)]
     n = M-1
-    t = 0
-    
-    for i in range(N):
-        a = 0
-        for x in range(M):
-            a += num[i][x+t]
-            if (x+t) != N-1:
-                t += 1
-            else:
-                break
-                
+    t = 4
+    i = 0
+while 1: 
+    a= 0
+    i = 0
+    for x in range(M):           
+        q = t-x
+        a += num[i][q]
+        i += 1
+    t -= 1
+    if q == 0:
+        break
+    print(a)
+        
         #     print(num[i][x-1])
         # print()             
-        print(a)
+        
+        
