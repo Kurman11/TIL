@@ -9,6 +9,8 @@
 * [Python](Python)
 > Week 3 ~ 7 / 23.01.09 ~ 23.02.03
 * [Algorithm](Algorithm)
+> Week 8 / 23.02.08 ~
+* [Database](Database)
 ***
 ### 특강 or 프로젝트
 * [Friday](Friday)
