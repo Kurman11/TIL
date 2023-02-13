@@ -2,15 +2,13 @@
 import sys
 sys.stdin = open('input.txt','r')
 
-T = int(input())
-
-a = [1, 0, 1, 1, 8]
-b = [0, 1, 1, 2, 13]
+T = int(input()) 
 
 for i in range(T):
+    a = [1] 
+    b = [0]
     num = int(input())
-    b[i] = a[i-1] + b [i-1]
-    b.append(b[i])
-    a[i] = b[i] - a[i-1]
-    a.append(a[i])
-    print(max(a),max(b))
+    for x in range(num):    
+        b.append(a[x] + b[x])
+        a.append(b[x])
+    print(a[-1],b[-1])
