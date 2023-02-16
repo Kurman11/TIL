@@ -8,3 +8,4 @@
 * [Where,LIKE](Where%2CLIKE.md)
 * [LIMIT,GROUP_BY,NULL](LIMIT%2CGROUP_BY%2CNULL.md)
 * [JOIN](JOIN.md)
+* [Subquery,EXISTS,CASE](Subquery%2CEXISTS%2CCASE.md)
