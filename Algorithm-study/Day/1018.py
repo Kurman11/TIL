@@ -1,5 +1,5 @@
 # 체스판 다시 칠하기
-# 답지를 보고.. 혼자서 해석만 했습니다...
+
 n, m = map(int, input().split())
 board = []
 result = []
