@@ -10,3 +10,4 @@
 * [JOIN](JOIN.md)
 * [Subquery,EXISTS,CASE](Subquery%2CEXISTS%2CCASE.md)
 * [Transaction,Triggers](Transaction%2CTriggers.md)
+* [Normalization,Data_Modeling](Normalization%2CData_Modeling.md)
