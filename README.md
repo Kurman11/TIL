@@ -9,8 +9,10 @@
 * [Python](Python)
 > Week 3 ~ 7 / 23.01.09 ~ 23.02.03
 * [Algorithm](Algorithm)
-> Week 8 / 23.02.08 ~
+> Week 8 ~ 10/ 23.02.08 ~ 23.02.21
 * [Database](Database)
+> Week 10 ~ / 23.02.22
+* [Web](Web)
 ***
 ### 특강 or 프로젝트
 * [Friday](Friday)
@@ -21,3 +23,4 @@
 ***
 ### 알고리즘 스터디
 * [Algorithm-study](Algorithm-study)
+
