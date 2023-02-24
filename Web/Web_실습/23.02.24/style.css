@@ -1,0 +1,52 @@
+@import url("https://font.elice.io/EliceDigitalBaeum.css");
+
+* {
+  font-family: 'Elice Digital Baeum';
+}
+
+img {
+    width: 200px;
+    height: 250px; 
+    border-radius: 30%;
+    overflow: hidden;
+    border: 1px black solid;
+    margin-top: 5px;
+}
+
+div {
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.si {
+  padding: 20px;
+  font-size: 45px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+a:link, a:visited {
+    color: #000000;
+}
+
+.box {
+    width : 30em;
+    border: 3px solid #40E0D0;
+    margin: 75px auto;
+}
+
+.icon{
+    margin-bottom: 1.5em;
+}
+
+h1{
+    color :	black;
+}
+p{
+    color : #32CD32;	
+}
