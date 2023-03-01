@@ -3,14 +3,28 @@ unsorted = 5
 index = 2
 heap_size = [2,5,1,4,3]
 
-def heapify(unsorted, index, heap_size):
-    largest = index
-    left_index = 2 * index + 1
-    right_index = 2 * index + 2
-    if left_index < heap_size and unsorted[left_index] > unsorted[largest]:
-        largest = left_index
-    if right_index < heap_size and unsorted[right_index] > unsorted[largest]:
-        largest = right_index
-    if largest != index:
-        unsorted[largest], unsorted[index] = unsorted[index], unsorted[largest]
-        heapify(unsorted, largest, heap_size)
+def check_swap_up(self, idx):
+	# 삽입한 모드의 부모 노드가 없을 경우
+    if idx <= 1:
+    	return False
+
+	parent_idx = idx // 2
+
+	if self.heap[idx] > self.heap[parent_idx]:
+		return True
+	else:
+    return False
+
+# 데이터 삽입
+def insert(self, data):
+	self.heap.append(data)
+    idx = len(self.heap) - 1
+
+    # check_swap_up() 의 값이 참이라면 부모와 위치 바꾸기
+    while self.check_swap_up(idx):
+    	parent_idx = idx // 2
+
+        self.heap[idx], self.heap[parent_idx] = self.heap[parent_idx], self.heap[idx]
+        idx = parent_idx
+
+	return True
