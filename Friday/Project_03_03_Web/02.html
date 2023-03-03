@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
+  <style>
+    .container {
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: flex;
+      }
+    .left__box{
+      height: 500px;
+      width: 20%;
+      text-align: left;
+      border-right: 1px solid black;
+    }
+    .left__box__logo{
+      height: 100px;
+      width: 100%;
+      text-align: left;
+      background-image: url(https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg);
+      background-size: 100% 100%;
+    }
+
+    .right__box{
+      height: 100%;
+      width: 100%;
+
+    }
+    .right__box__top{
+      height: 100px;
+      width: 100%;
+      border-bottom: 1px solid black;
+    }   
+    button:active{
+        background-color:gray;
+    }
+    button:hover{
+        background:lightgray;
+    }
+    
+    .btw{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .middle__box{
+      margin: 5px auto;
+      height: 190px;
+      width: 100%;
+      display: flex;
+    }
+    .middle__box__box__top{
+      margin: auto;
+      height: 150px;
+      width: 120px;
+    }
+
+    .middle__box__box__bottom{
+      margin-top: 20px;
+      margin-left: 14.5px;
+      height: 150px;
+      width: 120px;
+      border: 1px solid black;
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left__box">
+      <div class="left__box__logo">
+        <button style='cursor:pointer; border: none; background-color: white;' class="left__box__logo" onclick="location.href='https://open.spotify.com/artist/4LADVWbGgajvchOHelqZv2'"></button>
+      </div>
+      <p style="font-weight: bold;">홈</p>
+      <p style="font-weight: bold;">검색하기</p>
+      <p style="font-weight: bold;">내 라이브러리</p>
+    </div>
+    <div class="right__box">
+      <div class="right__box__top">
+        <div class="btw">
+          <div>
+            <button style="cursor:pointer; width: 150px ; height: 50px; margin-top: 25px; border-radius: 40px; border: 1px solid black;"><</button>
+            <button style="cursor:pointer; width: 150px ; height: 50px; margin-top: 25px; border-radius: 40px; border: 1px solid black;">></button>
+          </div>
+          <div>
+            <button style="cursor:pointer; width: 150px ; height: 50px; margin-top: 25px; border-radius: 40px; border: 1px solid black;" onclick="location.href='https://www.spotify.com/kr-ko/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2Fartist%2F4LADVWbGgajvchOHelqZv2'">가입하기</button>
+            <button style="cursor:pointer; width: 150px ; height: 50px; margin-top: 25px; border-radius: 40px; border: 1px solid black;" onclick="location.href='https://accounts.spotify.com/ko/login?continue=https%3A%2F%2Fopen.spotify.com%2F'">로그인하기</button>
+          </div>
+        </div>
+    </div>
+    <div>
+      <div class="middle__box">
+        <div style="background-color: black;" class="middle__box__box__top">
+          <img style="height: 150; width: 120px;" src="https://th.bing.com/th/id/OIP.dmROIQCkQ5rRIROkXoriYwHaHa?w=200&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+          <span style="color:white; font-size: 13px; ">아이유</span>
+          <span style="color:white; font-size: 10px; ">Celebrity</span>
+        </div>
+        <div style="background-color: black;" class="middle__box__box__top">
+          <img style="height: 150; width: 120px;" src="https://th.bing.com/th/id/OIP.7R2n8akQKnrEsWL1bn5sxAHaHa?w=200&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+          <span style="color:white; font-size: 13px; ">아이유</span>
+          <span style="color:white; font-size: 10px; ">Blueming</span>
+        </div>
+        <div style="background-color: black;" class="middle__box__box__top">
+          <img style="height: 150; width: 120px;" src="https://th.bing.com/th/id/OIP.3mTfEeu4b0MtedzLjBk_BgHaHa?w=187&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+          <span style="color:white; font-size: 13px; ">아이유</span>
+          <span style="color:white; font-size: 10px; ">Chat-Shire(앨범)</span>
+        </div>
+        <div style="background-color: black;" class="middle__box__box__top">
+          <img style="height: 150; width: 120px;" src="https://musicmeta-phinf.pstatic.net/album/002/188/2188308.jpg?type=r360Fll&v=20230223010618" alt="">
+          <span style="color:white; font-size: 13px; ">아이유</span>
+          <span style="color:white; font-size: 10px; ">꽃갈피 둘(앨범)</span>
+        </div>
+        <div style="background-color: black;" class="middle__box__box__top">
+          <img style="height: 150; width: 120px;" src="https://musicmeta-phinf.pstatic.net/album/001/855/1855408.jpg?type=r360Fll&v=20230223005315" alt="">
+          <span style="color:white; font-size: 13px; ">아이유</span>
+          <span style="color:white; font-size: 10px; ">밤편지</span>
+        </div>
+
+      </div>
+      <div class="middle__box">
+        <div class="middle__box__box__bottom">
+          <div style="background-color: black;" class="middle__box__box__top">
+            <img style="height: 150; width: 120px;" src="https://musicmeta-phinf.pstatic.net/album/000/397/397932.jpg?type=r360Fll&v=20230222235354" alt="">
+            <span style="color:white; font-size: 13px; ">아이유</span>
+            <span style="color:white; font-size: 10px; ">Modern-times</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: row;">
+     <span style="margin: auto;"><strong>5회차_고해림/ 6회차_김용진/ 6회차_신우현</strong></span>
+  </div>
+</body>
+</html>

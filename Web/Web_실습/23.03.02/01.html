@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div{
+      width: 100%;
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div-leftbox{
+      width: 50%;
+      float: left;
+      position: relative;
+      border: 0px;
+      box-sizing: border-box;
+    }
+    
+    .left-bgi{
+      background-image: url(../23.03.02_image/01.jpg);
+      background-size: 100% 100%;
+    }
+
+    .div-leftbox-boxbig{
+      width: 100px;
+      height: 50px;
+      background-image: url(../23.03.02_image/02.png);
+      background-size: 100% 100%;
+      position: absolute;
+      right: 0;
+    }
+    
+    .div-rightbox{
+      width: 50%;
+      float: right;
+      border: 0px;
+      box-sizing: border-box;
+    }
+
+    .div-rightbox-box{
+      width: 90%;
+      margin-left: 30px;
+      margin-bottom: 30px;
+      border: 0px;
+      box-sizing: border-box;
+    }
+
+
+    .box{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="div">
+    <div class="div-leftbox left-bgi">
+      <div class="div-leftbox div-leftbox-boxbig txt-lf"></div>
+    </div>
+    <div class="div-rightbox">
+      <div class="div-rightbox-box">
+        <strong>
+        <div class="box">
+          <div><h1>팀 버너스리</h1> </div>
+          <div><h3>프로그래머</h3></div>
+        </div>
+        <p>1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지</p>
+          <div class="box">
+            <div>국적</div>
+            <div>영국</div> 
+          </div>
+          <div class="box">
+            <div>생년월일</div>
+            <div>1955년 6월 8일</div>
+          </div>
+          <div class="box">
+            <div>직업</div>
+            <div>전산과학자, 프로그래머, 교수</div>
+          </div>
+          <div class="box">
+            <div>출신 대학</div>
+            <div>옥스퍼드 대학교 물리학 학사</div>
+          </div>
+          <div class="box">
+            <div>추가정보</div>
+            <div><a href="https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC">https://ko.wikipedia.org/wiki/팀_버너스리</a></div>
+        </div>
+        </strong>
+      </div>
+  </div>
+</body>
+</html>
