@@ -1,30 +1,46 @@
 # 알고리즘 수업 - 힙 정렬1
-unsorted = 5
-index = 2
-heap_size = [2,5,1,4,3]
+import sys
+sys.stdin = open('input.txt','r')
 
-def check_swap_up(self, idx):
-	# 삽입한 모드의 부모 노드가 없을 경우
-    if idx <= 1:
-    	return False
+N,K = map(int,input().split())
+A = list(map(int,input().split()))
+cnt = 0
+answer = []
 
-	parent_idx = idx // 2
+def heap_sort(a,n):
+    global cnt
+    build_min_heap(a,n)
+    for i in range(n-1, 0, -1):
+        a[0], a[i] = a[i], a[0]
+        cnt += 1
+        if cnt == K:
+            answer.extend([a[0], a[i]])
+        heapify(a, 0, i)
 
-	if self.heap[idx] > self.heap[parent_idx]:
-		return True
-	else:
-    return False
 
-# 데이터 삽입
-def insert(self, data):
-	self.heap.append(data)
-    idx = len(self.heap) - 1
+def build_min_heap(a,n):
+    for i in range((n//2), -1, -1):
+        heapify(a, i, n)
 
-    # check_swap_up() 의 값이 참이라면 부모와 위치 바꾸기
-    while self.check_swap_up(idx):
-    	parent_idx = idx // 2
+def heapify(a, k, n):
+    global cnt
+    l = 2 * k + 1
+    r = 2 * k + 2
+    if l < n and a[l] < a[k]:
+        smaller = l
+    else:
+        smaller = k
+    if r < n and a[r] < a[smaller] :
+        smaller = r
+    if smaller != k:
+        a[k], a[smaller] = a[smaller], a[k]
+        cnt += 1
+        if cnt == K:
+            answer.extend([a[k], a[smaller]])
+        heapify(a, smaller, n)
 
-        self.heap[idx], self.heap[parent_idx] = self.heap[parent_idx], self.heap[idx]
-        idx = parent_idx
-
-	return True
+heap_sort(A,N)
+if not answer:
+    print('-1')
+else:
+    print(*sorted(answer))
