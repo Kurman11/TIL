@@ -1,22 +1,19 @@
 # 하노이 탑 이동 순서
+# 답을 보고 튜터로 동작을 봐도 동작이 왜 이렇게 이루어지는지 모르겠네요...
+
 import sys
 sys.stdin = open('input.txt','r')
 
-# 원판의 개수
-n = int(input())
+num = int(input())
 
-# n개의 원반을 a -> c로 이동
-def Hanoi(n, a, b, c):
-    if n == 1:
-        print(a, c)
+def hanoi(num, one , two ,three): 
+    if num == 0: 
         return
+    hanoi(num-1, one, three, two)
+    print(one,two)
+    hanoi(num-1, three, two, one) 
 
-    # 원반 n-1 b로 이동
-    Hanoi(n-1, a, c, b)
-    # 가장 큰 원반을 c 로 이동
-    print(a, c)
-    # b 에 있는 원반 n-1 개를 c로 이동
-    Hanoi(n-1, b, a, c)
+    
 
-print(2 ** n - 1) # 이동 횟수
-if n <= 20: Hanoi(n, 1, 2, 3)
+print(2**num -1)
+hanoi(num,1,3,2)
