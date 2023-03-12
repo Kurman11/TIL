@@ -8,3 +8,5 @@
 * [SemanticWeb](SemanticWeb.md)
 * [Bootstrap](Bootstrap.md)
 * [Gridsystem](Gridsystem.md)
+* [Breakpoints](Breakpoints.md)
+* [UI_UX](UI_UX.md)
