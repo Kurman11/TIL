@@ -11,8 +11,10 @@
 * [Algorithm](Algorithm)
 > Week 8 ~ 10/ 23.02.08 ~ 23.02.21
 * [Database](Database)
-> Week 10 ~ / 23.02.22
+> Week 10 ~ 13 / 23.02.22 ~ 23.03.10
 * [Web](Web)
+> Week 14 ~  / 23.03.13 ~ 
+* [JavaScript](JavaScript)
 ***
 ### 특강 or 프로젝트
 * [Friday](Friday)
@@ -21,6 +23,7 @@
 ### 온라인 강의
 * [Online](Online)
 ***
-### 알고리즘 스터디
+### 스터디
 * [Algorithm-study](Algorithm-study)
+* [Front-end-study](Front-end-study)
 
