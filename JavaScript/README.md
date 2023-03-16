@@ -4,3 +4,6 @@
 * [History_of_Javascript](History_of_Javascript.md)
 * [JavaScript_and_DOMM](JavaScript_and_DOM.md)
 * [Basic_syntax_of_JavaScript](Basic_syntax_of_JavaScript.md)
+* [Functions](Functions.md)
+* [Object](Object.md)
+* [Array](Array.md)
