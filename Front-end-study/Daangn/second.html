@@ -4,56 +4,86 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>당신 근처의 당근마켓</title>
+  <title>동네 이웃들이 자주 가는 동네 가게</title>
   <script src="https://kit.fontawesome.com/7c01b20e08.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="icon" href= "https://d1unjqcospf8gs.cloudfront.net/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
+<!-- nav -->
 <nav>
   <div class="navbar navbar-expand-md bg-white sticky-top">
     <div class="container">
-      <div>
+      <div class="justify-content-between">
+      <div class="row">
+      <div class="col-6">
         <a class="navbar-brand" href="../YongJin/main.html">
           <img src="https://dnvefa72aowie.cloudfront.net/karrot-cs/etc/202007/0cf1d10235c37b2635c02719125da37cc1bd632518198b1e1da7f5a364156540.png" alt="" width="100" height="28">
         </a>
       </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex col-6" >
+          <button class="btn d-blcok d-md-none d-lg-none d-sm-block row" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="navbar-toggler row" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+      </div>
+      </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+        <ul class="navbar-nav d-flex flex-wrap">
             <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/main.html"><b>중고거래</b></a>
+              <a class="nav-link nav-a-style"style="margin-right: 15px;" href="../YongJin/main.html"><b>중고거래</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px; color: coral; " href="../YongJin/second.html"><b>동네가게</b></a>
+              <a class="nav-link nav-a-style"style="margin-right: 15px; color: coral; " href="../YongJin/second.html"><b>동네가게</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="margin-right: 15px;" href="../YongJin/third.html"><b>알바</b></a>
+              <a class="nav-link nav-a-style" style="margin-right: 15px;" href="../YongJin/third.html"><b>알바</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/fourth.html"><b>부동산 직거래</b></a>
+              <a class="nav-link nav-a-style"style="margin-right: 15px;" href="../YongJin/fourth.html"><b>부동산 직거래</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/Fifth.html"><b>중고차 직거래</b></a>
+              <a class="nav-link nav-a-style"style="margin-right: 15px;" href="../YongJin/Fifth.html"><b>중고차 직거래</b></a>
             </li>
         </ul>
+      </div>
+          <button class="btn d-none d-md-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
           <form class="d-flex" role="search">
-            <input class="form-control d-none d-lg-block border-0 bg-secondary-subtle" type="search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search" style="width: 288px; height: 40px; margin-right: 12px;" >
-            <button class="btn d-lg-none d-xl-none d-xxl-none" type="submit" style="width: 40px; height: 56px;" ><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="form-control d-none d-lg-block border-0 bg-secondary-subtle" type="Search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search" style="width: 288px; height: 40px; margin-right: 12px;" id="search-1" >
           </form>
           <form class="d-flex">
             <button class="btn btn-outline-light border border-dark d-none d-md-block" type="submit" style="width: 98px; height: 40px;" ><b style="color: black;">채팅하기</b></button>
           </form>
-        </div>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title w-100" id="offcanvasTopLabel"><input class="form-control border-0 bg-secondary-subtle nav-search-search" type="Search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search" style=" height: 100%; margin-right: 12px;" id="search-1" ></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 ms-3">
+      <p style="color: #898FB3; font-size: 0.875rem;">추천</p>
+      <div class="row">
+        <div class="col-6 nav-search">잠실 냉장고</div>
+        <div class="col-6 nav-search">강남 명품가방</div>
+      </div>
+      <hr style="margin-top: 3px; margin-bottom: 3px;">
+      <div class="row">
+        <div class="col-6 nav-search">키즈카페</div>
+        <div class="col-6 nav-search">자전거</div>
+      </div>
+      <hr style="margin-top: 3px; margin-bottom: 3px;">
+      <div class="row">
+        <div class="col-6 nav-search">홍대 쇼파</div>
+        <div class="col-6 nav-search">인천 노트북</div>
       </div>
     </div>
+  </div>
   </nav>
   <!-- 상단 -->
   <main>
     <section>
-      <div class="row w-100 m-0" style="background-color: #f7f1eb">
+      <div class="row w-100 m-0" style="background-color: #f7f1eb; height: 19.6875rem;">
         <div class="col-12 col-lg-2 my-auto offset-2 d-none d-lg-block">
           <h1 style="margin-bottom: 0; margin-top: 20px; width: 350px;">동네 이웃들이</h1><h1  style="width: 400px;">자주 가는 동네 가게</h1>
           <p style="width: 160px; margin-bottom: 0;">우리 동네 사람들이</p><p style="width: 220px;"> 이용하는 가게를 찾아보세요.</p>
@@ -62,10 +92,10 @@
           <h1 style="margin-bottom: 0; margin-top: 20px;">동네 이웃들이</h1><h1>자주 가는 동네 가게</h1>
         </div>
         <div class="col-12 text-center col-lg-6 offset-1 d-none d-lg-block p-0" style="width: 453;">
-          <img style="margin-top: 50px;" class="w-75" src="https://www.daangn.com/_next/static/media/nearby_stores_hero_image_3x.47c43e04.png" alt="">
+          <img style="height: 19.6875rem;" class="w-75" src="https://www.daangn.com/_next/static/media/nearby_stores_hero_image_3x.47c43e04.png" alt="">
         </div>
         <div class="col-12 text-center col-lg-6 p-0 d-block d-lg-none ">
-          <img style="margin-top: 50px;" class="w-75" src="https://www.daangn.com/_next/static/media/nearby_stores_hero_image_3x.47c43e04.png" alt="">
+          <img style="height: 12rem;" src="https://www.daangn.com/_next/static/media/nearby_stores_hero_image_3x.47c43e04.png" alt="">
         </div>
       </div>
     </section>
