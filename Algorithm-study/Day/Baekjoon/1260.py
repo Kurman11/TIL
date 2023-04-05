@@ -27,9 +27,6 @@ sys.stdin = open('input.txt','r')
 
 
 
-
-
-
 def dfs(a):
     global visted
     visted[a] = True
@@ -37,7 +34,6 @@ def dfs(a):
     for next in range(1,N+1):
         if not visted[next] and graph[a][next]:
             dfs(next)
-
 
 def bfs(a):
     global q,visted
@@ -48,7 +44,6 @@ def bfs(a):
             if not visted[next] and graph[cur][next]:
                 visted[next] = True
                 q.append(next)
-
 
 # 입력 및 초기화
 N, M, V = map(int,input().split())
