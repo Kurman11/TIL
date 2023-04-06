@@ -96,7 +96,6 @@ li{
   padding: 0px;
  }
 
-
   /* 다양한 동네가게를 볼 수 있어요 내용 */
   .all_page_size{
     width: 738px;
@@ -239,4 +238,71 @@ li{
   .fs-size-sub{
     font-size: 0.875rem;
     font-weight: bold;
+  }
+
+  /* 첫 번째 section */
+
+  .trust-header{
+    background-color: #F8F9FA;
+    padding-top: 9.6rem;
+    
+  }
+  .trust-header .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2.4rem !important; 
+  }
+
+  .trust-top{
+    padding-top: 100px;
+    width: 980px;
+    margin: 0 auto;
+  }
+
+  .trust-top-second-section{
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .trust-top-second-section_1{
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .trust-top-left-img{
+    width: 21rem;
+    height: 17rem;
+    margin-left: 4rem;
+    margin-right: 5rem;
+  }
+  .trust-top-right-img{
+    width: 21rem;
+    height: 17rem;
+    margin-left: 5rem;
+    margin-right: 4rem;
+  }
+
+  .trust-top-div {
+    margin-top: 40px;
+  }
+
+  /* 두 번째 section */
+
+  .trust-bottom{
+    padding-top: 100px;
+    background-color: #F8F9FA;
+  }
+
+  .trust-bottom-h1{
+    width: 980px;
+    margin: 0 auto;
+  }
+
+  .trust-bottom-img{
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .trust-bottom-div{
+    width: 21rem;
+    min-width: 21rem;
   }
