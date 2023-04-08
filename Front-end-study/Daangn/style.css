@@ -239,7 +239,8 @@ li{
     font-size: 0.875rem;
     font-weight: bold;
   }
-
+/* ===================================== */
+/* trust_daangen */
   /* 첫 번째 section */
 
   .trust-header{
@@ -306,3 +307,79 @@ li{
     width: 21rem;
     min-width: 21rem;
   }
+
+/* ================================ */
+  /* top_keywords 오늘의 중고 인기 검색어 */
+  .keyword-li{
+    width: 414px; 
+    height: 44px;
+    padding: 10px;
+    border-bottom: 1px solid #E9ECEF;
+  }
+  .keyword-up{
+    color: #e03131;
+  }
+
+  .keyword-down{
+    color: #186ec0;
+  }
+
+  .keyword:hover {
+    text-decoration: underline;
+  }
+
+/* ==================================== */
+/* search_ bicycle 자전거 */
+
+  .bicycle-container {
+    background-color: #F8F9FA;
+  }
+
+  .bicycle-div{
+    background-color: #FFFFFF;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #e9ecef;
+  }
+
+  .bicycle-h{
+    margin: 20px 0;
+    padding: 0 40px;
+  }
+  .bicycle-a{
+    width: 217px;
+  }
+
+  .bicycle-a-p{
+    color: black;
+  }
+  
+  .bicycle-card-img{
+    width: 217px;
+    height: 170px;
+  }
+
+  .bicycle-textover{
+    width: 235px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .bicycle-card-p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 6px;
+    color: #868e96;
+  }
+
+  .bicycle-card-p-sub{
+    font-weight: 600;
+    color: #ff8a3d;
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: 6px;
+  }
+
