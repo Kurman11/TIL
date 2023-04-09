@@ -1,51 +1,46 @@
 # 유기농 배추
 import sys
 sys.stdin = open('input.txt','r')
+sys.setrecursionlimit(10**6)
 
-
-import sys
-sys.stdin = open('input.txt','r')
-
-dx = [1, -1, 0, 0]
-dy = [0, 0, 1, -1]
+dx = [0,0,-1,1]
+dy = [1,-1, 0,0]
 
 def dfs(x,y):
     global visited
-    visited[x][y] = True
+    visited[x][y] = 1
     for i in range(4):
         newX = x + dx[i]
         newY = y + dy[i]
-        if graph[newX][newY] and not visited[newX][newY]:
-            dfs(newX,newY)
+        if 0 <= newX < N and 0 <= newY< M:
+            if visited[newX][newY] == 0 and graph[newX][newY] == 1:
+                dfs(newX, newY)
+        # if graph[newX][newY] and not visited[newX][newY]:
+        #     dfs(newX,newY)
 
 
 
 T = int(input())
-
 for _ in range(T):
     M,N,K = map(int,input().split())
-    graph = [[False * K for _ in range(M)] for _ in range(M)]
-    visited = [[False * K for _ in range(M)] for _ in range(M)]
-
-for i in range(K):
-    a, b =map(int,input().split())
-    # vistied[a][b] = 1
-    graph[b][a] = 1
+    graph = [[0] * M for _ in range(N)]
+    visited = [[0] * M for _ in range(N)]
+    for _ in range(K):
+        a, b =map(int,input().split())
+        graph[b][a] = 1
 
 
-answer = 0
-
-for i in range(1,N+1):
-    for j in range(1, M+1):
-        if graph[i][j] and not visited[i][j]:
-            dfs(i,j)
-            answer += 1
-
-print(answer)
+    answer = 0
+    for i in range(N):
+        for j in range(M):
+            if graph[i][j] and  not visited[i][j]:
+                dfs(i,j)
+                answer += 1
 
 
-for _ in graph:    
-    print(_)
+    print(answer)
+# for q in graph:    
+#     print(q)
 
 
 
