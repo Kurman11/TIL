@@ -1,7 +1,7 @@
 # 유기농 배추
 import sys
-sys.stdin = open('input.txt','r')
 sys.setrecursionlimit(10**6)
+sys.stdin = open('input.txt','r')
 
 dx = [0,0,-1,1]
 dy = [1,-1, 0,0]
