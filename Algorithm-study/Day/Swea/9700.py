@@ -1,0 +1,12 @@
+# USB 꽃기의 미스터리
+import sys
+sys.stdin = open('input.txt','r')
+
+T = int(input())
+
+for t in range(1, T+1):
+    p , q = map(float,input().split())
+    s1 = (1 - p) * q
+    s2 = p * (1 - q) * q
+
+    print(f'#{t}', "YES" if s2 > s1 else "NO")
