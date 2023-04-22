@@ -8,23 +8,24 @@
   <script src="https://kit.fontawesome.com/7c01b20e08.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="icon" href= "https://d1unjqcospf8gs.cloudfront.net/favicon.ico">
-<<<<<<< HEAD
   <link rel="stylesheet" href="style.css">
  <!-- style 삭제  by(민지,채윤) 코멘트 답변: main페이지는 클론코딩을 처음 시작한 페이지여서 너무 막 작성하여 수정하기 두려워(시간이 부족했음..) main페이지 수정을 안해서 남아있었습니다 ㅎㅎ.. -->
 </head>
 <body>
   <!-- 각 페이지 sticky-top 적용 by은비 원래 밑에 div에 sticky-top이 있었지만 search-1에 대한 div를 생성하면서 저용이 안되서 nav전체에 sticky-top적용했습니다.-->
+
+  <!-- navbar -->
   <nav class="sticky-top">  
-    <div class="navbar navbar-expand-md bg-white">
-      <div class="container">
-        <div class="justify-content-between">
+    <div class="navbar navbar-expand-md nav-container">
+      <div class="container bg-white">
+        <div class="justify-content-between nav-lg-down-div">
         <div class="row">
-        <div class="col-6">
+        <div class="col-6 ">
           <a class="navbar-brand" href="../YongJin/main.html">
             <img src="https://dnvefa72aowie.cloudfront.net/karrot-cs/etc/202007/0cf1d10235c37b2635c02719125da37cc1bd632518198b1e1da7f5a364156540.png" alt="" width="100" height="28">
           </a>
         </div>
-          <div class="d-flex col-6" >
+          <div class="d-flex col-6 nav-lg-down-col" >
             <button class="btn d-blcok d-md-none d-lg-none d-sm-block row" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
             <button class="navbar-toggler row" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -55,7 +56,7 @@
               <input class="form-control d-none d-lg-block border-0 bg-secondary-subtle" type="Search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search" style="width: 288px; height: 40px; margin-right: 12px;" id="search-1" >
             </form>
             <form class="d-flex">
-              <button class="btn btn-outline-light border border-dark d-none d-md-block" type="submit" style="width: 98px; height: 40px;" ><b style="color: black;">채팅하기</b></button>
+              <button onclick ="window.open('chat_login.html')" class="btn btn-outline-light border border-dark d-none d-md-block" type="submit" style="width: 98px; height: 40px;" ><b style="color: black;">채팅하기</b></button>
             </form>
       </div>
     </div>
@@ -83,81 +84,11 @@
       </div>
     </div>
     </nav>
+
+  <!-- main -->
   <main>
     <section>
       <div class="row w-100 m-0 " style="background-color: #FBF7F2; ">
-=======
-  <style>
-    .first-box{
-      width: 250px;
-      height: 300px;
-    }
-
-    .glanlink {color: black;}
-
-    .footer-box{
-      width: 131.47px;
-      height: 51.6px;
-    }
-
-    .footer-a{
-      text-decoration: none;
-      color: black;
-    }
-    .ft:hover{
-      text-decoration: underline;
-    }
-    .footer-a-a{
-      text-decoration: none;
-      color: lightslategray;
-      font-size: 13px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="navbar navbar-expand-md bg-white sticky-top">
-    <div class="container">
-      <div>
-        <a class="navbar-brand" href="../YongJin/main.html">
-          <img src="https://dnvefa72aowie.cloudfront.net/karrot-cs/etc/202007/0cf1d10235c37b2635c02719125da37cc1bd632518198b1e1da7f5a364156540.png" alt="" width="100" height="28">
-        </a>
-      </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-            <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px; color: coral; " href="../YongJin/main.html"><b>중고거래</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/second.html"><b>동네가게</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="margin-right: 15px;" href="../YongJin/third.html"><b>알바</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/fourth.html"><b>부동산 직거래</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"style="margin-right: 15px;" href="../YongJin/Fifth.html"><b>중고차 직거래</b></a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control d-none d-lg-block border-0 bg-secondary-subtle" type="search" placeholder="물품이나 동네를 검색해보세요" aria-label="Search" style="width: 288px; height: 40px; margin-right: 12px;" >
-          <button class="btn d-lg-none d-xl-none d-xxl-none" type="submit" style="width: 40px; height: 56px;" ><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-        <form class="d-flex">
-          <button class="btn btn-outline-light border border-dark d-none d-md-block" type="submit" style="width: 98px; height: 40px;" ><b style="color: black;">채팅하기</b></button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <main>
-    <section>
-      <div class="row w-100 m-0" style="background-color: rgb(255, 233, 236);">
->>>>>>> master
         <div class="col-12 col-lg-2 my-auto offset-2 d-none d-lg-block">
           <h1 style="margin-bottom: 0; margin-top: 20px; width: 350px;">당신 근처의</h1><h1  style="width: 200px;">당근마켓</h1>
           <p style="width: 340px;">중고 거래부터 동네 정보까지, 이웃과 함께해 가깝고 따뜻한 당신의 근처를 만들어요.</p>
@@ -179,12 +110,9 @@
       <div class="row w-100 m-0">
         <div class="col-12 col-lg-6 d-block d-lg-none text-center">
           <h1 style="margin-bottom: 0; margin-top: 50px;">우리동네</h1><h1>중고 직거래 마켓</h1>
-          <p">동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>
-          <div class="d-flex offset-4">          
-              <button class="btn btn-outline-light border-5" type="submit" style="width: 120px; height: 40px; margin-right: 15px;" ><b style="color: black;">채팅하기</b></button>
-           
-              <button class="btn btn-outline-light border-5" type="submit" style="width: 120px; height: 40px; margin-left: 15px;" ><b style="color: black;">채팅하기</b></button>            
-          </div>
+          <p">동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>          
+                <p><button class="button-hv button-style-lg-down rounded" type="submit"><b style="color: black;">인기매물 보기</b></button></p>
+                <p><a href="../YongJin/trust_daangen.html"><button class="button-hv button-style-lg-down rounded" type="submit"><b style="color: black;">믿을 수 있는 중고거래</b></button></p></a>
         </div>
         <div style="margin-top: 40px;" class="col-12 text-center col-lg-6 offset-1 d-none d-lg-block">
           <img class="w-75" src="../YongJin/image/image-1-cc678e9a217b96f5cb459f7f0684f5ba67706f9889801618b8cf879fbc2c0ea7.webp" alt="">
@@ -193,13 +121,8 @@
           <h1 style="margin-bottom: 0; margin-top: 20px;">우리 동네</h1><h1 style="margin-bottom: 15px;">중고 직거래 마켓</h1>
           <p>동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>
           <div class="d-flex">          
-            <button class="btn btn-outline-light border-5 " type="submit" style="width: 260px; height: 60px; margin-right: 15px;" ><b style="color: black;">인기매물 보기</b></button>
-         
-<<<<<<< HEAD
-            <button onclick = "location.href = '../YongJin/trust_daangen.html'" class="btn btn-outline-light border-5" type="submit" style="width: 260px; height: 60px; margin-left: 15px;" ><b style="color: black;">믿을 수 있는 중고거래</b></button>            
-=======
-            <button class="btn btn-outline-light border-5" type="submit" style="width: 260px; height: 60px; margin-left: 15px;" ><b style="color: black;">믿을 수 있는 중고거래</b></button>            
->>>>>>> master
+            <button class="button-hv button-style rounded" type="submit"><b style="color: black;">인기매물 보기</b></button>
+            <button class="button-hv button-style rounded" onclick = "location.href = '../YongJin/trust_daangen.html'" type="submit" ><b style="color: black;">믿을 수 있는 중고거래</b></button>            
         </div>
         </div>
         <div style="margin-top: 40px;" class="col-12 text-center d-block d-lg-none col-lg-7">
@@ -209,74 +132,44 @@
     </section>
   </main>
   <main>
-<<<<<<< HEAD
     <section>      
       <div class="row w-100 m-0" style="background-color: #E6F3E6;">
         <div class="col-12 col-lg-3 my-auto d-block d-lg-none text-center">
           <h1 style="margin-bottom: 0; margin-top: 100px;">이웃과 함께 하는</h1><h1 style="margin-bottom: 15px;">동네생활</h1>
           <p >우리 동네의 다양한 이야기를 이웃과 함께 나누어요.</p>
         </div>
-=======
-    <section>
-      <div class="row w-100 m-0" style="background-color: rgb(239, 250, 239);">
->>>>>>> master
         <div class="col-12 col-lg-3 my-auto offset-2 d-none d-lg-block">
           <h1 style="margin-bottom: 0; width: 350px;">이웃과 함께 하는</h1><h1 style="margin-bottom: 15px;">동네생활</h1>
           <p style="width: 380px;">우리 동네의 다양한 이야기를 이웃과 함께 나누어요.</p>
           <div class="d-flex text-start">
-<<<<<<< HEAD
           <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  #E6F3E6">
-=======
-          <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  rgb(239, 250, 239);">
->>>>>>> master
             <div class="card-body border-0" style="background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg);background-size: 56px 56px; width: 56px; height: 56px;">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
             </div>
             <ul class="list-group list-group-flush border-0">
-<<<<<<< HEAD
               <li style="background-color:#E6F3E6" class="list-group-item border-0 px-0 py-3"><b>동네분실센터</b></li>
               <li style="background-color:#E6F3E6" class="list-group-item px-0 py-3">무언가를 잃어버렸을 때, 함께 찾을 수 있어요.</li>
             </ul>
           </div>
           <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  #E6F3E6">
-=======
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item border-0 px-0 py-3"><b>동네분실센터</b></li>
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item px-0 py-3">무언가를 잃어버렸을 때, 함께 찾을 수 있어요.</li>
-            </ul>
-          </div>
-          <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  rgb(239, 250, 239);">
->>>>>>> master
             <div class="card-body border-0" style="background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg);background-size: 56px 56px; width: 56px; height: 56px;">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
             </div>
             <ul class="list-group list-group-flush border-0">
-<<<<<<< HEAD
               <li style="background-color:#E6F3E6" class="list-group-item border-0 px-0 py-3"><b>우리동네질문</b></li>
               <li style="background-color:#E6F3E6" class="list-group-item px-0 py-3">궁금한 게 있을 땐 이웃에게 물어보세요.</li>
             </ul>
           </div>
           <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  #E6F3E6">
-=======
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item border-0 px-0 py-3"><b>우리동네질문</b></li>
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item px-0 py-3">궁금한 게 있을 땐 이웃에게 물어보세요.</li>
-            </ul>
-          </div>
-          <div class="card border-0 col-3" style="font-size: 12px; width: 9rem; background-color:  rgb(239, 250, 239);">
->>>>>>> master
             <div class="card-body border-0" style="background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg);background-size: 56px 56px; width: 56px; height: 56px;">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
             </div>
             <ul class="list-group list-group-flush border-0">
-<<<<<<< HEAD
               <li style="background-color:#E6F3E6" class="list-group-item border-0 px-0 py-3"><b>동네모임</b></li>
               <li style="background-color:#E6F3E6" class="list-group-item px-0 py-3">관심사가 비슷한 이웃과 온오프라인으로 만나요.</li>
-=======
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item border-0 px-0 py-3"><b>동네모임</b></li>
-              <li style="background-color:rgb(239, 250, 239);" class="list-group-item px-0 py-3">관심사가 비슷한 이웃과 온오프라인으로 만나요.</li>
->>>>>>> master
             </ul>
           </div>
         </div>
@@ -289,11 +182,7 @@
           <img style="margin-top: 50px;" class="w-100" src="../YongJin/image/image-2-91a2286453bdf82dea16a7f0ee4ceb9dd325eae0e5a2a9967ba72c344bf8f2fc (1).webp" alt="">
         </div>
         <div class="col-12 text-center col-lg-6  d-block d-lg-none">
-<<<<<<< HEAD
           <img class="w-75" src="../YongJin/image/image-2-91a2286453bdf82dea16a7f0ee4ceb9dd325eae0e5a2a9967ba72c344bf8f2fc (1).webp" alt="">
-=======
-          <img style="margin-top: 50px;" class="w-75" src="../YongJin/image/image-2-91a2286453bdf82dea16a7f0ee4ceb9dd325eae0e5a2a9967ba72c344bf8f2fc (1).webp" alt="">
->>>>>>> master
         </div>
       </div>
     </section>
@@ -303,10 +192,8 @@
       <div class="row w-100 m-0">
         <div class="col-12 col-lg-6 d-block d-lg-none text-center">
           <h1 style="margin-bottom: 0; margin-top: 50px;">내 근처에서 찾는</h1><h1>동네가게</h1>
-          <p">동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>
-          <div class="d-flex offset-4">          
-              <button class="btn btn-outline-light border-5" type="submit" style="width: 240px; height: 60px;" ><b style="color: black;">당근마켓 동네가게 찾기</b></button>            
-          </div>
+          <p">동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</p>         
+          <p><button class="button-hv button-style-lg-down rounded" type="submit"><b style="color: black;">당근마켓 동네가게 찾기</b></button></p>          
         </div>
         <div style="margin-top: 40px;" class="col-12 text-center col-lg-6 offset-1 d-none d-lg-block">
           <img class="w-75" src="../YongJin/image/image-3-5fd6fb61d603ab919a45566b2ea6b505c83a93ec218f34ddcd5cb482543e2317.webp" alt="">
@@ -316,7 +203,7 @@
           <p style="margin-bottom: 0;">우리 동네 가게를 찾고 있나요?</p>
           <p>동네 주민이 남긴 진짜후기를 함께 확인해보세요!</p>
           <div class="d-flex">          
-            <button class="btn btn-outline-light border-5" type="submit" style="width: 240px; height: 60px;" ><b style="color: black;">당근마켓 동네가게 찾기</b></button>            
+            <button class="button-hv button-style rounded" type="submit" ><b style="color: black;">당근마켓 동네가게 찾기</b></button>            
         </div>
         </div>
         <div style="margin-top: 40px;" class="col-12 text-center d-block d-lg-none col-lg-7">
@@ -329,9 +216,8 @@
   <section>
     <div class="m-0 d-none d-lg-block" style="background-color: rgb(248, 250, 252);"><br>
       <div class="text-center"><h1 style="margin-top: 100px; margin-bottom: 50px; ">중고거래 인기매물</h1>
-      <!-- 첫 번쨰 -->
       <div class="container row col-11 offset-1 mt-5" style="margin: auto;">
-        <div class="col-3 d-flex flex-nowrap">
+        <div class="col-3 d-flex flex-nowrap"><a class="footer-a" href="../YongJin/search_ bicycle_articles.html">
           <div class="card border-0" style="width: 19rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/d533be8be038162650c7d8954974976a6053370b5fb663aabfdb7319a52b5a19.webp?q=82&s=300x300&t=crop" class="card-img-top rounded " alt="...">
               <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -339,7 +225,7 @@
                 <h5 class="card-title">3000만원</h5>
                 <p class="card-text" style="font-size: 12px; margin: 0px;">경북 포항시 북구 두호동</p>
                 <p class="card-text" style="font-size: 12px; color: rgb(181, 185, 189);">관심 135 · 채팅 100</p>
-              </div>       
+              </div></a>       
           </div>
         </div>
         <div class="col-3 d-flex flex-nowrap">
@@ -377,7 +263,6 @@
         </div>
       </div>
     </div>
-      <!-- 두번 째 -->
       <div class="container row col-11 offset-1 mt-5" style="margin: auto;">
         <div class="col-3 d-flex flex-nowrap">
           <div class="card border-0" style="width: 20rem;">
@@ -406,7 +291,7 @@
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/3eec12a1295dd052102e4e174e3968ecef9ee38dd0eafbb3d54c39abc5d24623.webp?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
               <p class="card-text mt-3 mb-1">노트20울트라5G</p>
-              <h5 class="card-title">320,000dnjs</h5>
+              <h5 class="card-title">320,000원</h5>
               <p class="card-text" style="font-size: 12px; margin: 0px;">서울 구로구 구로제1동</p>
               <p class="card-text" style="font-size: 12px; color: rgb(181, 185, 189);">관심 22 · 채팅 32</p>
             </div>          
@@ -429,9 +314,8 @@
     <!-- lg 이하일때 -->
     <div class="w-100 m-0 row d-block d-lg-none" style="background-color: rgb(248, 250, 252);"><br>
       <div class="text-center"><h1 style="margin-top: 100px; margin-bottom: 50px; ">중고거래 인기매물</h1>
-      <!-- 첫 번쨰 -->
-      <div class="container row col-10 offset-2">
-        <div class="col-5 d-flex flex-nowrap ">
+      <div class="row justify-content-end">
+        <div class="col-6 d-flex justify-content-center"><a class="footer-a" href="../YongJin/search_ bicycle_articles.html">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/d533be8be038162650c7d8954974976a6053370b5fb663aabfdb7319a52b5a19.webp?q=82&s=300x300&t=crop" class="card-img-top rounded " alt="...">
               <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -441,8 +325,8 @@
                 <p class="card-text" style="font-size: 12px; color: rgb(181, 185, 189);">관심 135 · 채팅 100</p>
               </div>       
           </div>
-        </div>
-        <div class="col-5 d-flex flex-nowrap">
+        </div></a>
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/1562a03a547a6c4d909cd5105db87494984ed9fca3bd022b74caffb813c1cee9.webp?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -453,7 +337,7 @@
             </div>         
           </div>
         </div>
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/e62cf90d9872ab6bbbadfd1b9664ece3d4b8e23b71fd003f9d7024bf60dc2b76.webp?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -464,7 +348,7 @@
             </div>        
           </div>
         </div>
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/755ED484DA988E81BF60E98528536194A7B94825CE3665CC037B79B430B016CD.jpg?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -475,11 +359,7 @@
             </div>         
           </div>
         </div>
-      </div>
-    </div>
-      <!-- 두번 째 -->
-      <div class="container row col-10 offset-2 mt-5">
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/9f261913c2a7eb2c9cfce2f1e05ce579b368e9edf4be4c0b48449df1cb780067.webp?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -490,7 +370,7 @@
             </div>         
           </div>
         </div>
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/F68D59888AC6E5778902EBEEB9371476EDFCBFF9ADEE4E26DD0FD2A271AAE69F.jpg?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -501,7 +381,7 @@
             </div>         
           </div>
         </div>
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/3eec12a1295dd052102e4e174e3968ecef9ee38dd0eafbb3d54c39abc5d24623.webp?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -512,7 +392,7 @@
             </div>          
           </div>
         </div>
-        <div class="col-5 d-flex flex-nowrap">
+        <div class="col-6 d-flex justify-content-center">
           <div class="card border-0" style="width: 18rem;">
             <img src="https://dnvefa72aowie.cloudfront.net/origin/article/202303/0ec758995b023d91d1c39c5b0db2f06d622385cc2fb41eb5b9ded5ad223b761c.jpg?q=82&s=300x300&t=crop" class="card-img-top rounded" alt="...">
             <div class="card-body p-0" style="background-color: rgb(248, 250, 252);">
@@ -525,79 +405,30 @@
         </div>
         <a style="margin-bottom: 200px; color: black;" class="text-center" href=""><b>인기매물 더 보기</b></a>
       </div>
+      </div>
     </div>
   </section>
   </main>
   <main>
     <section>
       <div class="w-100 m-0 row">
-<<<<<<< HEAD
         <a style="color: black;" class="text-center mt-5 mb-4" href="../YongJin/top_keywords.html"><b>중고거래 인기검색어</b></a><br>
-        <div class="container col-12 row d-none d-lg-block text-center" style="margin-bottom: 70px;">
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="search_ bicycle.html">자전거</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">의자</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">아이폰</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">냉장고</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">노트북</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">패딩</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">아이패드</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">모니터</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">스타벅스</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink ft" href="#">책상</a>
-        </div>
-        <div class="container col-12 row d-lg-none d-bolck text-center" style="margin-bottom: 70px;">
-          <div class="row col-11 offset-1">
-            <a style="text-decoration: none ;" class="col-3 glanlink ft" href="#">자전거</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink ft" href="#">의자</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink ft" href="#">아이폰</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink ft" href="#">냉장고</a>
-          </div><br>
-          <div class="row col-10 offset-2">
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">노트북</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">패딩</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">아이패드</a>
-          </div> 
-          <div class="row col-10 offset-2">
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">모니터</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">스타벅스</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink ft" href="#">책상</a>
-=======
-        <a style="color: black;" class="text-center mt-5 mb-4" href=""><b>중고거래 인기검색어</b></a><br>
-        <div class="container col-12 row d-none d-lg-block text-center" style="margin-bottom: 70px;">
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">자전거</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">의자</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">아이폰</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">냉장고</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">노트북</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">패딩</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">아이패드</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">모니터</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">스타벅스</a>
-            <a style="text-decoration: none ;" class="col-1 glanlink " href="#">책상</a>
-        </div>
-        <div class="container col-12 row d-lg-none d-bolck text-center" style="margin-bottom: 70px;">
-          <div class="row col-11 offset-1">
-            <a style="text-decoration: none ;" class="col-3 glanlink " href="#">자전거</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink " href="#">의자</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink " href="#">아이폰</a>
-            <a style="text-decoration: none ;" class="col-3 glanlink " href="#">냉장고</a>
-          </div><br>
-          <div class="row col-10 offset-2">
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">노트북</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">패딩</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">아이패드</a>
-          </div> 
-          <div class="row col-10 offset-2">
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">모니터</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">스타벅스</a>
-            <a style="text-decoration: none ;" class="col-4 glanlink " href="#">책상</a>
->>>>>>> master
-          </div> 
+        <div class="container text-center" style="margin-bottom: 70px;">
+          <ul class="d-flex flex-wrap justify-content-center">
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="search_ bicycle.html">자전거</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">의자</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">아이폰</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">냉장고</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">노트북</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">패딩</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">아이패드</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">모니터</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">스타벅스</a></li>
+            <li><a style="text-decoration: none;" class="col-1 glanlink ft p-3" href="#">책상</a></li>
+          </ul>  
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-
   </main>
   <!-- 하단 fixed-bottom -->
   <section class="d-lg-none" id="fx-bottom">
@@ -618,96 +449,92 @@
         </div>
       </div>
     </div>
-
   </section>
 
-
-=======
-  </main>
->>>>>>> master
+<!-- footer -->
   <hr>
     <footer>
       <!-- xl 이하일때 -->
       <div class="container">
-        <div class="col-9 offset-3 p-0 d-block d-xl-none">
+        <div class="p-0 d-block d-xl-none">
           <p class="m-0" style="font-size: 13px;"><b>당근마켓 앱 다운로드</b> <a style="font-size: 15px;" class="footer-a" href="#"><b>ios<img src="../YongJin/image/arrow.PNG" alt=""></b></a> <a style="font-size: 15px;" class="footer-a" href=""><b>Android <img src="../YongJin/image/arrow.PNG" alt=""></b></a></p>
         </div>
       </div>
       <div class="container">
-        <div class="row container col-9 offset-3 pt-5 pb-4 ps-0 pe-0">
-          <div class="col-1" style="width: 131.47px;">
-            <div class="footer-box"><a class="footer-a ft" href="#">중고거래</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">동네가게</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">당근알바</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">부동산 거래</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">중고차 직거래</a></div>
+          <div class="row container pt-5 pb-4 ps-0 pe-0 justify-content-center">
+              <div class="col-1" style="width: 131.47px;">
+                <div class="footer-box"><a class="footer-a ft" href="#">중고거래</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">동네가게</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">당근알바</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">부동산 거래</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">중고차 직거래</a></div>
+              </div>
+              <div class="col-1" style="width: 131.47px;">
+                <div class="footer-box"><a class="footer-a ft" href="#">당근비즈니스</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">채팅하기</a></div>
+              </div>
+              <div class="col-1" style="width: 131.47px; margin-right: 69.594px;">
+                <div class="footer-box"><a class="footer-a ft" href="#">자주 묻는 질문</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">회사 소개</a></div>
+                <div class="footer-box"><a class="footer-a ft" href="#">인재 채용</a></div>
+              </div>
+              <!-- xl 이상일때만 보임 -->
+              <div class="col-12 p-0 d-none d-xl-block" style="width: 300px;">
+                <p class="m-0"><b>당근마켓 앱 다운로드</b></p>
+                <div>
+                  <button class="btn btn-outline-light col-6 p-0" type="submit" style="width: 129px; height: 44px;" ><img src="../YongJin/image/apple.PNG" alt=""></img></button>
+                  <button class="btn btn-outline-light col-6 p-0 ms-3" type="submit" style="width: 129px; height: 44px;" ><img src="../YongJin/image/google.PNG" alt=""></button>  
+                </div>
+              </div>
           </div>
-          <div class="col-1" style="width: 131.47px;">
-            <div class="footer-box"><a class="footer-a ft" href="#">당근비즈니스</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">채팅하기</a></div>
-          </div>
-          <div class="col-1" style="width: 131.47px; margin-right: 69.594px;">
-            <div class="footer-box"><a class="footer-a ft" href="#">자주 묻는 질문</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">회사 소개</a></div>
-            <div class="footer-box"><a class="footer-a ft" href="#">인재 채용</a></div>
-          </div>
-          <!-- xl 이상일때만 보임 -->
-          <div class="col-12 p-0 d-none d-xl-block" style="width: 300px;">
-            <p class="m-0"><b>당근마켓 앱 다운로드</b></p>
-            <div>
-              <button class="btn btn-outline-light col-6 p-0" type="submit" style="width: 129px; height: 44px;" ><img src="../YongJin/image/apple.PNG" alt=""></img></button>
-              <button class="btn btn-outline-light col-6 p-0 ms-3" type="submit" style="width: 129px; height: 44px;" ><img src="../YongJin/image/google.PNG" alt=""></button>  
-            </div>
-          </div>
-        </div>
         <div class="container">
-          <div class="row container col-9 offset-3 pt-2 ps-0 pe-0" style="padding-bottom: 100px;">
+          <div class="row container pt-2 ps-0 pe-0 justify-content-center" style="padding-bottom: 100px;">
             <hr>
-            <div class="col-6">
-          <div>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>대표</b> 김용현, 황도연</span>
-            <span style="color: lightsteelblue;">|</span>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>사업자번호</b> 375-87-00088</span>
-          </div>
-          <div>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>직업정보제공사업 신고번호</b> 2016-서울서초-0051</span>
-          </div>
-          <div>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>주소</b> 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)</span>
-          </div>
-          <div>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>전화</b> 1544-9796</span>
-            <span style="color: lightsteelblue;">|</span>
-            <span class="text-secondary-emphasis" style="font-size: 13px;"><b>고객문의</b> cs@daangnservice.com</span><br>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">제휴 문의</a>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">광고 문의</a>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">PR 문의</a>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">IR 문의</a><br>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">이용약관</a>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">개인정보처리방침</a>
-            <a class="footer-a-a ft" style="font-size: 13px;" href="#">위치기반서비스 이용약관</a>
-            <a class="footer-a-a ft" style="font-size: 12px;" href="#">이용자보호 비전과 계획</a>
-            <div class="col-12 ms-0 d-block d-xl-none">
-              <a href="#"><img class = "col" src="../YongJin/image/facebook.PNG" alt=""></a>
-              <a href="#"><img class = "col" src="../YongJin/image/instagram.PNG" alt=""></a>
-              <a href="#"><img class = "col" src="../YongJin/image/youtube.PNG" alt=""></a>
-              <a href="#"><img class = "col" src="../YongJin/image/blog.PNG" alt=""></a>
-              <a class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 92px; height: 33px;" >
-                  <span class="text-secondary-emphasis" style="font-size: 13px;"><img src="../YongJin/image/web.PNG" alt="">한국</span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" type="button">한국</button></li>
-                  <li><button class="dropdown-item" type="button">영국</button></li>
-                  <li><button class="dropdown-item" type="button">캐나다</button></li>
-                  <li><button class="dropdown-item" type="button">미국</button></li>
-                  <li><button class="dropdown-item" type="button">일본</button></li>
-                </ul>
-              </a>
+          <div class="col-4">
+            <div>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>대표</b> 김용현, 황도연</span>
+              <span style="color: lightsteelblue;">|</span>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>사업자번호</b> 375-87-00088</span>
+            </div>
+            <div>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>직업정보제공사업 신고번호</b> 2016-서울서초-0051</span>
+            </div>
+            <div>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>주소</b> 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)</span>
+            </div>
+            <div>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>전화</b> 1544-9796</span>
+              <span style="color: lightsteelblue;">|</span>
+              <span class="text-secondary-emphasis" style="font-size: 13px;"><b>고객문의</b> cs@daangnservice.com</span><br>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">제휴 문의</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">광고 문의</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">PR 문의</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">IR 문의</a><br>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">이용약관</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">개인정보처리방침</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">위치기반서비스 이용약관</a>
+              <a class="footer-a-a ft" style="font-size: 11px;" href="#">이용자보호 비전과 계획</a>
+              <div class="col-12 ms-0 d-block d-xl-none">
+                <a href="#"><img class = "col" src="../YongJin/image/facebook.PNG" alt=""></a>
+                <a href="#"><img class = "col" src="../YongJin/image/instagram.PNG" alt=""></a>
+                <a href="#"><img class = "col" src="../YongJin/image/youtube.PNG" alt=""></a>
+                <a href="#"><img class = "col" src="../YongJin/image/blog.PNG" alt=""></a>
+                <a class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 92px; height: 33px;" >
+                    <span class="text-secondary-emphasis" style="font-size: 13px;"><img src="../YongJin/image/web.PNG" alt="">한국</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" type="button">한국</button></li>
+                    <li><button class="dropdown-item" type="button">영국</button></li>
+                    <li><button class="dropdown-item" type="button">캐나다</button></li>
+                    <li><button class="dropdown-item" type="button">미국</button></li>
+                    <li><button class="dropdown-item" type="button">일본</button></li>
+                  </ul>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-          <div class="col-5 ms-0 d-none d-xl-block">
+          <div class="col-3 ms-0 d-none d-xl-block">
             <a href="#"><img class = "col" src="../YongJin/image/facebook.PNG" alt=""></a>
             <a href="#"><img class = "col" src="../YongJin/image/instagram.PNG" alt=""></a>
             <a href="#"><img class = "col" src="../YongJin/image/youtube.PNG" alt=""></a>
@@ -729,7 +556,6 @@
       </div>
     </div>
   </footer>
-<<<<<<< HEAD
 
   <script>
     const bottom_btn = document.querySelector('#bottom-btn')
@@ -740,8 +566,6 @@
     })
   </script>
 
-=======
->>>>>>> master
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
