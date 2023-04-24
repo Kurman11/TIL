@@ -15,7 +15,7 @@ graph = [[] for _ in range(n + 1)]
 visited = [False] * (n+1)
 
 # 최단 거리 테이블을 모두 무한으로 초기화
-distance = [INF] * (n+1)
+distance = [INF] * (n+1)    
 
 # 모든 간선 정보를 입력받기
 for _ in range(m):
