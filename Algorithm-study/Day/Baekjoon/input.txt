@@ -1,6 +1,5 @@
-5
-top
-top
-top
-top
-kimtop
+abcd
+3
+P x
+L
+P y
