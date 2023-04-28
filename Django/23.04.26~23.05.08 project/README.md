@@ -68,4 +68,62 @@
 
 
 
-## 23/04/28
+## 23/04/28 정리
+  1. 이미지 넣기  
+    * 이슈 : print로 이미지가 들어가는 것은 확인 했으나 db에 저장이 안되는 이슈
+    * 해결 : forms.py > 
+    ```python
+    class ArticleForm(forms.ModelForm):
+    class Meta:
+        model = Article
+        fields = ('title','content','image',)
+    ```
+    fields > image 작성을 빼먹어서 한시간 정도 소요함.
+    다시한번 체크 하기로 마음 먹음
+  
+  2. 게시글/댓글 create_at 기준 부터 지금 현재까지 작성 시간 코드 
+    * 별다른 이슈 없이 조원분들과 함께 코드 완성
+
+  3. search 기능
+    * 조원분이 과거 프로젝트에서 했던 코드가 있다고 해서 가져와서 작성
+    ```python
+    def search(request):
+    query = request.GET.get('q', '')
+    if query:
+        search = Article.objects.filter(
+            Q(title__icontains=query)|
+            Q(user__username__exact=query)
+        )
+    else:
+        search = Article.objects.all()[::-1]
+    context = {
+        'articles' : search
+    }
+    print()
+    return render(request, 'articles/index.html', context)
+    ```
+    * Q라는 개념을 처음 알았고 차후 공부를 더 해봐야 할거 같다.
+    * 이슈 : search : search로 context에 넣어 줬는대 templates에서 articles로 받아 줘서 출력을 못했음
+    * 해결 : context 에 search를 articles로 변경하여 해결
+
+    4. 오늘의딜 시간(관리자가 종료시점(deadline)을 걸어두면 현재 시간부터 얼마가 남아있는지 카운트)
+      * 이슈 :
+              1. 조원 모두가 처음 도전하는 코드여서 많은 서치와 시간이 소요됨
+              2. 코드를 찾아 작성 했지만 for문으로 개시글 마다 넣어주었을때 제일 첫번째 작성글에만 카운트가 생성됨
+              3. JS에서 article를 받아오는 방법에 시간을 많이 사용
+      * 해결 : 
+              1. django가 아닌 JS로 접근함
+              2. article.pk를 div에 넣어줄 생각으로 접근을 계속 시도
+              3. J쿼리를 사용해 JS에서도 for문 적용이 가능하다는 것을 찾음
+              4. for문을 사용해 article.pk를 js에 서 받아 div로 뿌려줌
+
+    5. 스크랩
+      * 다른 이슈 없이 어제 만든 좋아요 기능을 다시 적용하여 스크랩 model을 작성후 적용
+
+    6. 월요일 휴일을 예상해서 프론트? 퍼블리셔? 작업 구역을 나눠서 한명씩 지정된 페이지 만들어오기 
+
+    ### 오늘 후기
+    * 어제와 다르게 오늘은 막히는 구간이 있어서 시간을 많이 사용 했지만 시간을 사용 하더라도 문제를 해결하고 코드가 동작 할때의 재미 때문에 막히더라도 계속해서 코드를 동작시키는 재미가 있는거 같다.
+    토/일/월은 쉬면서 스터디 or django project 작업물을 만드는 것이 목표
+    
+      
