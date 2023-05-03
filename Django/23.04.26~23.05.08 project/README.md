@@ -167,3 +167,80 @@
 ### 정리
   * 이미지를 여러장 넣는 거에 시간을 많이 사용해서 생각보다 오늘 만들어낸 결과물이 없는거 같다. 나도 그렇고 팀원들끼리 대화가 없는게 문제 같은데 어떻게 대화를 계속 주고 받을지 고민해야겠다.
 
+
+# 23/05/04
+  ## 추가해준 데이터에서 대표 이미지 페이지에 출력하기
+  * 이슈 : 3개의 이미지중 하나의 이미지만 뽑는데에 오전을 다 사용함
+  * 해결 : 
+    1. 처음 이미지중 첫 번째 이미지만 뽑도록 코드를 작성
+```python
+          a = []
+    for i in products:
+        # if i.product.pk not in a:
+        if i.product.pk not in a:
+            a.append(i.product.pk)
+            a.append(i)
+        else:
+            pass
+        
+    b = a[1::2]
+```
+  2. 하지만 그렇게 되면 대표 이미지 설정이 아니므로 admin 계정에서 메인 이미지를 수동으로 다시 넣어줌
+  3. 이후 views.py , templates에 파일을 작성후 데이터를 출력
+```python
+# views.py
+def product(request):
+    products = Product.objects.all()
+    if request.user.is_authenticated:
+        nickname = request.user.nickname
+        context = {
+            'products' : products,
+            'nickname' : nickname,
+        }
+        return render(request, 'articles/product.html', context)
+    else:
+        context = {
+            'products' : products,
+        }
+    return render(request, 'articles/product.html', context)
+```
+```html
+<!-- templates -->
+<div>
+      {% for product in products %}
+       <img src="{{ product.main_image.url }}" alt="">
+      {% endfor %}
+</div>
+```
+## 이후 각각의 페이지에 대한 Figma로 이미지 구상
+## 쇼핑 페이지에 들어갈 배너 만들기
+
+## 수업 이후
+  * 쇼핑 페이지는 따로 시간이 된다면 만들어 보신다고 해서 혼자서 index에 데이터를 넣는거를 할지 강사님께서 힌트를 주고 가셔서 signup 페이지를 수정할지 고민하다 signup 페이지를 수정하기로 정함
+  * signup 페이지에서 dropdown-menu에 item을 눌렀을때 해당 email형식이 id에 작성될수 있도록 JS 코드를 찾음
+
+```javascript
+// dropdown li 내용들을 누르면 해당 내용으로 바뀌는 JS
+    const emailInput = document.querySelector('#id_username')
+    const dropdownItems = document.querySelectorAll('.dropdown-item')
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const domain = item.dataset.domain
+        if (domain === 'direct-input') {
+          emailInput.value = ''
+          //emailInput.removeAttribute('disabled')
+          emailInput.focus()
+          isInputEnabled = true
+        } else {
+          emailInput.value = `${emailInput.value.split('@')[0]}@${domain}`
+          //emailInput.setAttribute('disabled', 'disabled')
+        }
+      })
+    })
+```
+   * 이후 체크박스에 필수로 적힌 내용은 체크를 해야지만 회원가입이 되도록 input에 required를 추가함
+
+
+### 정리
+오늘도 많이는 하지 못 한거 같아서 아쉽다. 다른 조는 지금까지도 모여서 작업하는데..
+그렇다고 개인시간에 모여서 작업하자고 말하기에는 내 욕심인거 같아서 눈치보다 한번 이야기 해봐야겠다.
