@@ -108,6 +108,108 @@ def anonymous_detail(request, post_pk):
     context['anonymous_id'] = anonymous_id
     
     return render(request, 'posts/anonymous_detail.html', context)
-    ```
+```
     앞으로는 의심을 했으면 조금더 파고들어야겠다...
-    
+
+# 23.06.07
+휴일 4일동안 별다른 코딩은 조금만 해서 별다른 내용은 없다 휴일에서 가져온 문제를 오늘 하루종일 했지만 해결을 못했는대 페이지 네이션을 사용했을때 ajax로 데이터를 받아오면 자꾸 페이지 네이션이 안되거나 ajax가 안되거나 또는 페이지가 두번 출력되는 현상이 계속 발생한다 JS를 사용을 잘 못해서 답답한게 너무 크다.
+
+# 23.06.08
+결국 페이지 네이션 버튼을 바꿔서 ajax를 적용하는대 성공했다
+```html
+  $(document).ready(function() {
+    // 드롭다운 선택 이벤트 리스너
+    $('#section-dropdown').on('change', function() {
+      var selectedSection = $(this).val();
+      var currentPage = 1; // 첫 페이지로 설정
+      var url = '{% url 'posts:index' %}';
+      // AJAX 요청 전송
+      sendAjaxRequest(url, selectedSection, currentPage);
+    });
+  
+    // 페이지 번호 클릭 이벤트 리스너
+    $(document).on('click', '.page-link', function(event) {
+      event.preventDefault();
+      var selectedPage = $(this).attr('href').split('=')[1];
+      var selectedSection = $('#section-dropdown').val();
+      var url = '{% url 'posts:index' %}';
+      // AJAX 요청 전송
+      sendAjaxRequest(url, selectedSection, selectedPage);
+    });
+  
+    // 첫 페이지 클릭 이벤트 리스너
+    $(document).on('click', '.first-page', function() {
+      var selectedSection = $('#section-dropdown').val();
+      var url = '{% url 'posts:index' %}';
+      // AJAX 요청 전송
+      sendAjaxRequest(url, selectedSection, 1);
+    });
+  
+    // AJAX 요청 전송 함수
+    function sendAjaxRequest(url, section, page) {
+      $.ajax({
+        url: url,
+        method: 'GET',
+        data: { section: section, page: page },
+        success: function(response) {
+          // 서버로부터 받은 HTML을 section-posts 영역에 대체
+          $('#section-posts').html($(response).find('#section-posts').html());
+          // 선택된 섹션을 유지하기 위해 드롭다운 값을 설정
+          $('#section-dropdown').val(section);
+          // 현재 페이지 데이터 속성 업데이트
+          $('#section-posts').data('current-page', page);
+          updatePagination(); // 페이지네이션 업데이트
+        }
+      });
+    }
+  
+    // 페이지네이션 업데이트 함수
+    function updatePagination() {
+      var currentPage = parseInt($('#section-posts').data('current-page')) || 1;
+      var total_pages = parseInt('{{ total_pages }}') || 1;
+      var pageLinks = $('.page-link');
+      pageLinks.parent('.page-item').removeClass('active');
+  
+      // 현재 페이지 버튼에 active 클래스 추가
+      pageLinks.each(function() {
+        var pageNumber = $(this).attr('href').split('=')[1];
+        if (pageNumber == currentPage) {
+          $(this).parent('.page-item').addClass('active');
+        }
+      });
+  
+      // 페이지 범위 설정
+      var pageRange = 5; // 출력할 페이지 범위 크기
+      var startPage = Math.max(1, currentPage - Math.floor(pageRange / 2));
+      var endPage = Math.min(total_pages, startPage + pageRange - 1);
+      startPage = Math.max(1, endPage - pageRange + 1);
+  
+      // 페이지 버튼 업데이트
+      var paginationContainer = $('.pagination');
+      paginationContainer.empty();
+  
+      // 첫 페이지와 이전 페이지 버튼
+      if (currentPage > 1) {
+        paginationContainer.append('<li class="page-item first-page"><a class="page-link" href="?page=1">처음</a></li>');
+        paginationContainer.append('<li class="page-item previous-page"><a class="page-link" href="?page=' + (currentPage - 1) + '">이전</a></li>');
+      }
+  
+      // 페이지 버튼
+      for (var i = startPage; i <= endPage; i++) {
+        if (i == currentPage) {
+          paginationContainer.append('<li class="page-item active"><a class="page-link" href="?page=' + i + '">' + i + '</a></li>');
+        } else {
+          paginationContainer.append('<li class="page-item"><a class="page-link" href="?page=' + i + '">' + i + '</a></li>');
+        }
+      }
+  
+      // 다음 페이지와 마지막 페이지 버튼
+      if (currentPage < total_pages) {
+        paginationContainer.append('<li class="page-item next-page"><a class="page-link" href="?page=' + (currentPage + 1) + '">다음</a></li>');
+        paginationContainer.append('<li class="page-item last-page"><a class="page-link" href="?page=' + total_pages + '">마지막</a></li>');
+      }
+    }
+  });
+```
+내가짠 코드는 아니지만 많은 시간을 들여서 성공했다 추가로 댓글에 필터걸고 지금 현제 더보기 버튼을 누르면 댓글이 5개씩 보일 수 있도록 도전 중이다
+오늘 컨디션이 별루여서 힘들었지만 조금 쉬다가 가서 완성시키고 자는게 목표다.
